@@ -1,0 +1,50 @@
+/* Checkerboard background for transparency preview */
+.transparency-grid {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGAQYcAP3uPzJ849jMoYSVBAcmQ0GBAAAsInZeLYA8QD6i7Y0I9SrgMAlkwzXb791VIAAAAASUVORK5CYII=');
+    background-repeat: repeat;
+}
+
+/* Ensure rendered SVG fills container correctly */
+#svg-preview-container svg {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
+/* Custom scrollbar for the dark code area */
+#code-output::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+#code-output::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+#code-output::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+#code-output::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* UI Helper Classes */
+.hidden-node { 
+    display: none !important; 
+}
+
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+.animate-fade-in { 
+    animation: fadeIn 0.4s ease-out forwards; 
+}
